@@ -83,7 +83,7 @@ export default {
         id: 1,
         name: "情人的眼淚",
         pronunciation: "lalupela",
-        image: "../src/assets/image/情人的眼淚.jpg",
+        image: new URL('../assets/image/情人的眼淚.jpg', import.meta.url).href,
         price: 70,
         audio: "../src/assets/video/lalupela.mov",
         description: "雨來菇，是古時雨後在山坡、草皮上就能採到的野菜，阿美族傳說中曾有一對私奔戀人最後因無力逃跑，在草原上相擁而亡，而兩人滴下的眼淚就化為一朵朵的雨來菇，因此雨來菇又稱「情人的眼淚」。"
@@ -101,7 +101,7 @@ export default {
         id: 3,
         name: "藤心",
         pronunciation: "dungec",
-        image: "../src/assets/image/藤心.jpg",
+        image: new URL('../assets/image/藤心.jpg', import.meta.url).href,
         price: 120,
         audio: "../src/assets/video/dungec.mov",
         description: "阿美族人招待貴賓時，藤心是不可缺少的食物，部落耆老則喜歡將其煮湯，喝它的甘苦原味。阿美族部落流傳「吃藤心，壽命如藤條一般長」，顥示族人相信藤心對健康相當有助益。"
@@ -110,7 +110,7 @@ export default {
         id: 4,
         name: "劍筍",
         pronunciation: "adeci",
-        image: "../src/assets/image/劍筍.jpg",
+        image: new URL('../assets/image/劍筍.jpg', import.meta.url).href,
         price: 100,
         audio: "../src/assets/video/箭筍.mov",
         description: "劍筍是台灣特有種，阿美族人傳統的吃法是和鹹豬肉或排骨一起熬湯，或是和鹹豬肉、辣椒一起炒，在以前會在還未剝外皮時將它拿去烤再淋上烤鹹豬肉的油也別有一番風味。"
@@ -119,7 +119,7 @@ export default {
         id: 5,
         name: "阿里鳳鳳",
         pronunciation: "alibungbung",
-        image: "../src/assets/image/阿里鳳鳳超清晰.JPG",
+        image: new URL('../assets/image/阿里鳳鳳超清晰.jpg', import.meta.url).href,
         price: 60,
         audio: "../src/assets/video/alifunfung.mov",
         description: "阿美族傳統社會中，妻子會準備給外出的丈夫，稱為「情人粽」，採集葉子去除葉骨跟刺，編織成袋狀，再將糯米、鹹豬肉放入，蒸煮後成為愛心便當。"
@@ -128,7 +128,7 @@ export default {
         id: 6,
         name: "糯米飯",
         pronunciation: "hakhak",
-        image: "../src/assets/image/hakhak.jpg",
+        image: new URL('../assets/image/hakhak.jpg', import.meta.url).href,
         price: 30,
         audio: "../src/assets/video/hakhak.mov",
         description: "「HakHak」是阿美族的傳統料理，用糯米蒸煮後搭配菜食用。一般部落配鹹魚乾、醃豬肉等，在慶典、婚喪喜慶及重大節日才會吃得到。"

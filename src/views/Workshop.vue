@@ -88,7 +88,7 @@ export default {
           name: "製作情人袋",
           instructor: "講師巴奈",
           pronunciation: "alubu",
-          image: "../src/assets/image/製作情人袋.jpg",
+          image: new URL('../assets/image/製作情人袋.jpg', import.meta.url).href,
           audio: "../src/assets/video/alubu.mov",
           description:
             "豐年祭上，女孩可藉由舞蹈將檳榔放入心儀男孩的情人袋，若男孩也非常屬意女孩，則可將情人袋贈與給女孩配戴，宣告兩人的交往關係。",
@@ -100,7 +100,7 @@ export default {
           name: "認識野菜",
           instructor: "講師 笛布斯",
           pronunciation: "dateng",
-          image: "../src/assets/image/認識野菜.jpg",
+          image:new URL('../assets/image/認識野菜.jpg', import.meta.url).href,
           audio: "../src/assets/video/dateng.mov",
           description:
             "阿美族，又稱「吃草的民族」，居住地自然環境、資源豐厚，而發展出野菜文化。早年阿美族取得食物不易，便直接山林中取材，從野外少量採摘蔬菜。",
@@ -112,7 +112,7 @@ export default {
           name: "樹皮文化",
           instructor: "講師 拉厚克",
           pronunciation: "tupelak",
-          image: "../src/assets/image/399694620_664327975847548_4643314732394794198_n.jpg",
+          image: new URL('../assets/image/399694620_664327975847548_4643314732394794198_n.jpg', import.meta.url).href,
           audio: "../src/assets/video/tupelak.mov",
           description:
             "大自然與原住民的生活息息相關，在三百多年前阿美族人就會用樹皮來做衣服，由於沒有留下文字資料，一切靠口傳，體驗樹皮文化的創作。",
@@ -148,7 +148,7 @@ export default {
           name: "古謠傳唱",
           instructor: "講師 大亨",
           pronunciation: "remadiw",
-          image: "../src/assets/image/名人校園講唱會.jpg",
+          image: new URL('../assets/image/名人校園講唱會.jpg', import.meta.url).href,
           audio: "../src/assets/video/remadwi.mov",
           description:
             "課程中學習一般歌謠，指平時所唱的歌謠，包括工作歌及生活歌。演唱方式除應答唱法外，大多是以齊唱的方式來進行。",

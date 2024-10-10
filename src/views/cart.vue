@@ -70,11 +70,13 @@
   
   <script>
   // 使用 Pinia 的購物車 store
-  import { useCartStore } from "@/stores/cartStore"; 
+  import { useCartStore } from "@/stores/cartStore";
+  import { useRouter } from 'vue-router'; // 引入 Vue Router
   
   export default {
     setup() {
       const cartStore = useCartStore(); // 引入購物車 store
+      const router = useRouter(); // 引入 Vue Router 來導航
   
       const checkoutForm = {
         name: "王東尼",
@@ -84,7 +86,7 @@
       };
   
       const removeFromCart = (index) => {
-        cartStore.removeFromCart(index); // 更新為正確的 Pinia action 名稱
+        cartStore.removeFromCart(index);
       };
   
       const updateQuantity = (index, quantity) => {
@@ -92,31 +94,31 @@
       };
   
       const checkout = () => {
-      if (cartStore.cartItems.length === 0) {
-    // 顯示 SweetAlert 提示購物車為空
-    Swal.fire({
-      title: '購物車為空',
-      text: '請選擇商品後再結帳！',
-      icon: 'warning',
-      confirmButtonText: '確認',
-      confirmButtonColor: 'crimson'
-    });
-    return;
-      } 
-
-      // 顯示 SweetAlert 訂單成功訊息
-      Swal.fire({
-      title: '感謝您的訂購！',
-      text: '我們已收到您的訂單，會儘快處理。',
-      icon: 'success',
-      confirmButtonText: '確認',
-      confirmButtonColor: 'green'
-      }).then(() => {
-     // 清空購物車並刷新頁面
-      cartStore.clearCart();
-      window.location.reload(); // 刷新頁面
-    });
-};
+        if (cartStore.cartItems.length === 0) {
+          // 顯示 SweetAlert 提示購物車為空
+          Swal.fire({
+            title: '購物車為空',
+            text: '請選擇商品後再結帳！',
+            icon: 'warning',
+            confirmButtonText: '確認',
+            confirmButtonColor: 'crimson'
+          });
+          return;
+        }
+  
+        // 顯示 SweetAlert 訂單成功訊息
+        Swal.fire({
+          title: '感謝您的訂購！',
+          text: '我們已收到您的訂單，會儘快處理。',
+          icon: 'success',
+          confirmButtonText: '確認',
+          confirmButtonColor: 'green'
+        }).then(() => {
+          // 清空購物車並導航到 HomePage
+          cartStore.clearCart();
+          router.push('/homepage'); // 導航到首頁
+        });
+      };
   
       return {
         cartItems: cartStore.cartItems,
@@ -130,6 +132,7 @@
     },
   };
   </script>
+  
   
   <style scoped>
   @import url(../assets/css/reset.css);

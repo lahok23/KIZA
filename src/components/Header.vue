@@ -1,8 +1,8 @@
 <template>
     <div class="header">
-      <a id="logo" href="/homepage">
+      <router-link to="homepage" >
         <img src="@/assets/image/橫式超超小.png" alt="logo" />
-      </a>
+      </router-link>
       <div class="hamburger" >
         <i class="ph-bold ph-list"></i>
       </div>

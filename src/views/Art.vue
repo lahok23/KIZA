@@ -64,7 +64,7 @@ export default {
           id: 1,
           name: "加禮宛木雕",
           artist: "卡兆・馬耀",
-          image: "../src/assets/image/加禮宛 木雕 改過.png",
+          image: new URL('../assets/image/加禮宛 木雕 改過.png', import.meta.url).href,
           description:
             "加禮宛木雕，達固湖灣被攻破後，二族慘遭滅族，倖存族人逃往縱谷、東海岸，隱身於阿美族之中，直至2007年才正名成功。2006年7月1日，撒奇萊雅族於花蓮市國福部落舉辦首次火神祭，喚醒逝去的靈魂其記取過去。",
           price: 80000,
@@ -73,7 +73,7 @@ export default {
           id: 2,
           name: "部落的土地",
           artist: "卡兆・馬耀",
-          image: "../src/assets/image/房子阿美族.jpg",
+          image: new URL('../assets/image/房子阿美族.jpg', import.meta.url).href,
           description:
             "原住民的活動範圍逐漸受限，生活方式也被迫變遷，造成文化的流失，土地的淵源就是人的淵源。光是地名用來辨識當地資源、地貌、地形，族人不失去方向，是祖先們生活時留下來的智慧結晶。",
           price: 60000,
@@ -82,7 +82,7 @@ export default {
           id: 3,
           name: "母親的祝福",
           artist: "黃聖安",
-          image: "../src/assets/image/黃聖安01.JPG",
+          image: new URL('../assets/image/黃聖安01.JPG', import.meta.url).href,
           description:
             "阿美族社會是一個典型的母系社會，INA (依娜) 是媽媽，也是太陽，太陽是阿美族的精神象徵。太陽的光是慈祥的，是母親的手，溫暖並守護著族人，母親的角色象徵著生命的延續和大地的豐饒。",
           price: 9000,
@@ -91,7 +91,7 @@ export default {
           id: 4,
           name: "漁筌工具",
           artist: "文健站長輩",
-          image: "../src/assets/image/魚筌（阿美族）.png",
+          image:new URL('../assets/image/魚筌（阿美族）.png', import.meta.url).href,
           description:
             "魚筌為漁撈用編容器的一種，用以從事捕魚活動，該件物品的製作材質為黃藤與竹，用絞織編法縛紮而成，做漏斗狀，功用在於使魚、蝦進入之後無法游出去而被捕獲。",
           price: 1200,
@@ -100,7 +100,7 @@ export default {
           id: 5,
           name: "竹鐘樂器",
           artist: "達魯·嘎照",
-          image: "../src/assets/image/kakeng截圖.png",
+          image: new URL('../assets/image/kakeng截圖.png', import.meta.url).href,
           description:
             "竹鐘（Kakeng）是阿美族獨有的樂器之一。傳統阿美族女方取男方時，女方家族為了告知部落家族即將再多增加一位男丁，便以長竹筒管擊地作為報喜訊的方式，日治時期政府以「文明」為名，禁止阿美族招贅的風俗，進而使敲擊竹鐘的傳統消逝。",
           price: 5000,
@@ -109,7 +109,7 @@ export default {
           id: 6,
           name: "木鼓樂器",
           artist: "達魯·嘎照",
-          image: "../src/assets/image/木鼓.JPG",
+          image:new URL('../assets/image/木鼓.JPG', import.meta.url).href,
           description:
             "過去阿美族人的木鼓是取樟樹或茄苳樹等不易腐爛的樹種，將樹幹挖空成鼓胴，再用繩索懸掛於聚會所，要召集族人時，便用杵棒撞擊使之產生宏亮聲響。族人也會依集合或緊急的狀況，決定敲擊鼓聲的長短與多少為信號，這樣的方式有效地傳遞訊息。",
           price: 4000,
