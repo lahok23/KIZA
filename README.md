@@ -1,29 +1,24 @@
-# IndigenousProject
+原住民文化旅遊與購物平台 - KIZA (個人小專案)
+KIZA 是推廣台灣原住民文化的旅遊與購物平台，讓使用者可以透過這個平台了解和體驗原住民的藝術、飲食、住宿及文化活動。
 
-This template should help get you started developing with Vue 3 in Vite.
+文化推廣
+原住民藝術品與食材購物：平台上架了多種原住民藝術品與傳統食材，展示豐富的文化背景。
+文化活動介紹：詳細介紹多項原住民文化活動，從節慶到藝術創作，提升文化認識。
+住宿預訂：提供住宿選項，讓使用者能輕鬆預訂與文化活動相關的住宿。
+會員系統：註冊後用戶可以收藏商品、管理訂單，並瀏覽個人資料。
+技術架構
+前端技術
+框架：Vue.js 作為主要框架，負責頁面的動態渲染和元件化開發。
+狀態管理：Pinia 進行購物車管理，確保數據集中管理與更新。
+路由管理：Vue Router 管理多頁面，讓使用者能夠順暢地瀏覽平台內容。
+樣式：使用 CSS 來處理樣式。
+通知與提示：整合 SweetAlert 來處理訂單成功、錯誤等使用者提示。
 
-## Recommended IDE Setup
+後端技術
+此平台目前沒有後端，所有數據以前端模擬方式呈現，未來可能加入 API 來實現動態數據更新。
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+主要功能
+購物車與訂單管理：使用 Pinia 進行購物車管理，支援商品數量更新、價格計算與訂單確認。
+住宿預訂系統：彈窗選擇住宿日期、地點與房型，並計算價格。
+動態篩選功能：讓使用者根據日期、地點等條件篩選住宿和商品。
