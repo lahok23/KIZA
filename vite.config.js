@@ -1,19 +1,26 @@
-import { fileURLToPath, URL } from 'node:url'
+import { URL } from 'url';
+import path from 'path';
+import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
+import vueDevTools from 'vite-plugin-vue-devtools';
+import compression from 'vite-plugin-compression';
 
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
-import vueDevTools from 'vite-plugin-vue-devtools'
-
+// 使用 path.resolve 替換 fileURLToPath
 export default defineConfig({
   plugins: [
     vue(),
     vueDevTools(),
+    compression({
+      algorithm: 'gzip',
+      ext: '.gz',
+      threshold: 10240,
+    }),
   ],
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))
-    }
+      '@': path.resolve(__dirname, './src'),
+    },
   },
-  base: '/KIZA/', // 新增這行，設置正確的根路徑
-  assetsInclude: ['**/*.JPG', '**/*.jpg', '**/*.png', '**/*.jpeg'] // 添加這行來處理圖片檔案
-})
+  base: '/KIZA/', // 設置正確的根路徑
+  assetsInclude: ['**/*.JPG', '**/*.jpg', '**/*.png', '**/*.jpeg'],
+});

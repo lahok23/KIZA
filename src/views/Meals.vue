@@ -85,7 +85,7 @@ export default {
         pronunciation: "lalupela",
         image: new URL('../assets/image/情人的眼淚.jpg', import.meta.url).href,
         price: 70,
-        audio: "../src/assets/video/lalupela.mov",
+        audio:new URL('@/assets/video/lalupela.mov', import.meta.url).href,
         description: "雨來菇，是古時雨後在山坡、草皮上就能採到的野菜，阿美族傳說中曾有一對私奔戀人最後因無力逃跑，在草原上相擁而亡，而兩人滴下的眼淚就化為一朵朵的雨來菇，因此雨來菇又稱「情人的眼淚」。"
       },
       {
@@ -94,7 +94,7 @@ export default {
         pronunciation: "siraw",
         image: "https://dcm.s3.hicloud.net.tw/new/collection/2020-10-16/94dbd3ea-e8f7-4d83-a538-71d4c91348f9/e64e5370-0282-4b96-984b-12aeeec2d35a.jpg",
         price: 300,
-        audio: "../src/assets/video/siraw.mov",
+        audio:new URL('@/assets/video/siraw.mov', import.meta.url).href,
         description: "喜烙是原住民非常具有代表性的傳統食材，幾乎是族人們從小吃到大，喜烙就是醃生豬肉，用粗鹽醃製，經過發酵後的豬肉風味獨特，酸酸鹹鹹的滋味，讓許多初次嘗試的朋友都留下深刻的印象。"
       },
       {
@@ -103,7 +103,7 @@ export default {
         pronunciation: "dungec",
         image: new URL('../assets/image/藤心.jpg', import.meta.url).href,
         price: 120,
-        audio: "../src/assets/video/dungec.mov",
+        audio: new URL('@/assets/video/dungec.mov', import.meta.url).href,
         description: "阿美族人招待貴賓時，藤心是不可缺少的食物，部落耆老則喜歡將其煮湯，喝它的甘苦原味。阿美族部落流傳「吃藤心，壽命如藤條一般長」，顥示族人相信藤心對健康相當有助益。"
       },
       {
@@ -112,7 +112,7 @@ export default {
         pronunciation: "adeci",
         image: new URL('../assets/image/劍筍.jpg', import.meta.url).href,
         price: 100,
-        audio: "../src/assets/video/箭筍.mov",
+        audio: new URL('@/assets/video/箭筍.mov', import.meta.url).href,
         description: "劍筍是台灣特有種，阿美族人傳統的吃法是和鹹豬肉或排骨一起熬湯，或是和鹹豬肉、辣椒一起炒，在以前會在還未剝外皮時將它拿去烤再淋上烤鹹豬肉的油也別有一番風味。"
       },
       {
@@ -121,7 +121,7 @@ export default {
         pronunciation: "alibungbung",
         image: new URL('../assets/image/阿里鳳鳳超清晰.jpg', import.meta.url).href,
         price: 60,
-        audio: "../src/assets/video/alifunfung.mov",
+        audio: new URL('@/assets/video/alifunfung.mov', import.meta.url).href,
         description: "阿美族傳統社會中，妻子會準備給外出的丈夫，稱為「情人粽」，採集葉子去除葉骨跟刺，編織成袋狀，再將糯米、鹹豬肉放入，蒸煮後成為愛心便當。"
       },
       {
@@ -130,7 +130,7 @@ export default {
         pronunciation: "hakhak",
         image: new URL('../assets/image/hakhak.jpg', import.meta.url).href,
         price: 30,
-        audio: "../src/assets/video/hakhak.mov",
+        audio: new URL('@/assets/video/hakhak.mov', import.meta.url).href,
         description: "「HakHak」是阿美族的傳統料理，用糯米蒸煮後搭配菜食用。一般部落配鹹魚乾、醃豬肉等，在慶典、婚喪喜慶及重大節日才會吃得到。"
       }
     ],

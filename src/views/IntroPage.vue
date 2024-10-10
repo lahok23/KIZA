@@ -131,12 +131,12 @@
     // 確認 container 存在再進行操作
     if (container) {
       const delta = Math.sign(event.deltaY);
-      const scrollStep = 150;
+      const scrollStep = 70;
       container.scrollLeft += delta * scrollStep;
 
       const scrollHint = document.querySelector('.scroll-hint');
-      if (scrollHint) {
-        scrollHint.style.display = 'none';
+      if (scrollHint && container.scrollLeft > 0) {
+        scrollHint.style.display = 'none'; // 滾動後隱藏提示
       }
     }
   }

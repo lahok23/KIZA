@@ -230,17 +230,17 @@ video {
 
 
 .scroll-hint {
-  position: absolute;
-  top: 50%;
+  position: fixed;
+  bottom: 50%;
   right: 20px;
-  transform: translateY(-50%);
   z-index: 1000;
   color: white;
-  padding: 1px 20px;
+  padding: 10px 20px;
   font-weight: bold;
-  opacity: 0.8;
-  transition: 2s;
+
+  opacity: 1;
 }
+
 
 
 

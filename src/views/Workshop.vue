@@ -89,7 +89,7 @@ export default {
           instructor: "講師巴奈",
           pronunciation: "alubu",
           image: new URL('../assets/image/製作情人袋.jpg', import.meta.url).href,
-          audio: "../src/assets/video/alubu.mov",
+          audio:new URL('@/assets/video/alubu.mov', import.meta.url).href,
           description:
             "豐年祭上，女孩可藉由舞蹈將檳榔放入心儀男孩的情人袋，若男孩也非常屬意女孩，則可將情人袋贈與給女孩配戴，宣告兩人的交往關係。",
           duration: "6.5h",
@@ -101,7 +101,7 @@ export default {
           instructor: "講師 笛布斯",
           pronunciation: "dateng",
           image:new URL('../assets/image/認識野菜.jpg', import.meta.url).href,
-          audio: "../src/assets/video/dateng.mov",
+          audio: new URL('@/assets/video/dateng.mov', import.meta.url).href,
           description:
             "阿美族，又稱「吃草的民族」，居住地自然環境、資源豐厚，而發展出野菜文化。早年阿美族取得食物不易，便直接山林中取材，從野外少量採摘蔬菜。",
           duration: "3h",
@@ -113,7 +113,7 @@ export default {
           instructor: "講師 拉厚克",
           pronunciation: "tupelak",
           image: new URL('../assets/image/399694620_664327975847548_4643314732394794198_n.jpg', import.meta.url).href,
-          audio: "../src/assets/video/tupelak.mov",
+          audio: new URL('@/assets/video/tupelak.mov', import.meta.url).href,
           description:
             "大自然與原住民的生活息息相關，在三百多年前阿美族人就會用樹皮來做衣服，由於沒有留下文字資料，一切靠口傳，體驗樹皮文化的創作。",
           duration: "4h",
@@ -125,7 +125,7 @@ export default {
           instructor: "講師 拿告",
           pronunciation: "uway",
           image: "https://www.jacreative.com.tw/eastcwh/2019/images/fakong/s8.jpg",
-          audio: "../src/assets/video/uway.mov",
+          audio: new URL('@/assets/video/uway.mov', import.meta.url).href,
           description:
             "體驗藤編文化，在迷你的小背簍中看見部落的力與美！由可愛的藤編Ina教你製作背簍時，削成扁形的做成四周與底部的編織，削成圓形的作為提揹的支架。",
           duration: "3h",
@@ -137,7 +137,7 @@ export default {
           instructor: "講師 阿勒飛斯",
           pronunciation: "misakeru",
           image: "https://www.hualiennews.com/wp-content/uploads/2021/05/46B03EBD-64F5-426F-B0CD-4D5201035994.jpg",
-          audio: "../src/assets/video/misakeru.mov",
+          audio: new URL('@/assets/video/misakeru.mov', import.meta.url).href,
           description:
             "『歌』，記憶以前的生活，『舞』，保存現在的傳統『樂舞展現的不僅是表演藝術，是藏在靈魂裡的語言，是傳遞文化的媒介。』",
           duration: "2h",
@@ -149,7 +149,7 @@ export default {
           instructor: "講師 大亨",
           pronunciation: "remadiw",
           image: new URL('../assets/image/名人校園講唱會.jpg', import.meta.url).href,
-          audio: "../src/assets/video/remadwi.mov",
+          audio: new URL('@/assets/video//remadwi.mov', import.meta.url).href,
           description:
             "課程中學習一般歌謠，指平時所唱的歌謠，包括工作歌及生活歌。演唱方式除應答唱法外，大多是以齊唱的方式來進行。",
           duration: "3h",
