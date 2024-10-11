@@ -690,7 +690,8 @@ section h2 {
   /* 金額 */
   .card-item .subtitle{
     font-size: 0.7rem;
-    margin-top: -40px;
+    margin-top: 0px;
+  
     width: 25ch;
   
   }
