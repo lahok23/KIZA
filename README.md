@@ -1,29 +1,26 @@
-# IndigenousProject
+# 原住民文化旅遊與購物平台 - KIZA (個人小專案)
 
-This template should help get you started developing with Vue 3 in Vite.
+KIZA 是一個推廣台灣原住民文化的旅遊與購物平台，讓使用者能夠深入了解並親身體驗原住民的藝術、飲食、住宿及文化活動。
 
-## Recommended IDE Setup
+## 文化推廣
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+1. **原住民藝術品與食材購物**：平台提供多種原住民藝術品與傳統食材，展示豐富的文化背景，讓使用者可以輕鬆選購。
+2. **文化活動介紹**：詳細介紹多項原住民文化活動，從節慶到藝術創作，提升使用者對原住民文化的認識。
+3. **住宿預訂**：提供多樣化的住宿選項，方便使用者預訂與文化活動相關的住宿，體驗在地風情。
 
-## Customize configuration
+## 技術架構
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+### 前端技術
 
-## Project Setup
+1. **框架**：使用 Vue.js 作為主要前端框架，負責頁面動態渲染與元件化開發。
+2. **開發工具**: 使用 Vite 作為開發工具，提升開發效率。
+3. **狀態管理**：採用 Pinia 進行購物車管理，確保數據集中管理與即時更新。
+4. **樣式**：採用 CSS 進行樣式設計，提供流暢的視覺與使用者體驗。
+5. **通知與提示**：整合 SweetAlert 來處理訂單成功、錯誤等訊息提示，增強使用者互動。
+6. **語音功能**：部分商品頁面提供語音發音功能，讓使用者可以透過播放語音，學習並了解原住民語言的正確發音
+   
+### 後端技術
 
-```sh
-npm install
-```
+此專案目前無後端支援，所有數據皆由前端模擬顯示，未來可能會整合 API 以實現動態數據更新。
 
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+「專案展示」:https://lahok23.github.io/KIZA/
