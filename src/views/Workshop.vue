@@ -149,7 +149,7 @@ export default {
           instructor: "講師 大亨",
           pronunciation: "remadiw",
           image: new URL('../assets/image/名人校園講唱會.jpg', import.meta.url).href,
-          audio: new URL('@/assets/video//remadwi.mov', import.meta.url).href,
+          audio: new URL('@/assets/video/remadwi.mov', import.meta.url).href,
           description:
             "課程中學習一般歌謠，指平時所唱的歌謠，包括工作歌及生活歌。演唱方式除應答唱法外，大多是以齊唱的方式來進行。",
           duration: "3h",
@@ -678,6 +678,7 @@ section h2 {
     font-size: 0.6rem;
   }
   .course .name{
+    z-index: 100;
     font-size: 1.3rem;
     margin-top: -35px;
   }

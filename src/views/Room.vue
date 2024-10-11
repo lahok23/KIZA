@@ -28,13 +28,13 @@
     <!-- 房間展示區域 -->
     <section class="room">
       <h2>選擇奇萊房間</h2>
-      <p>土地即是文化的道路</p>
+      <p class="smallTitle">土地即是文化的道路</p>
       <div class="room-container">
         <div v-for="(room, index) in visibleRooms" :key="index" class="room-item" :data-location="room.location">
           <a href="#" @click.prevent="openBookingPopup(room)">
             <img :src="room.image" :alt="room.name" @load="onImageLoad" @error="onImageError" />
           </a>
-          <p>{{ room.rating }}/10 <span>{{ room.reviews }}</span></p>
+          <p class="ratingReviews">{{ room.rating }}/10 <span>{{ room.reviews }}</span></p>
           <h3>{{ room.name }}</h3>
           <p>{{ room.location }}</p>
           <div class="room-item-btn">
@@ -269,31 +269,63 @@ export default {
     };
   },
   computed: {
-    visibleRooms() {
-      return this.filteredRooms.slice(this.currentStartIndex, this.currentStartIndex + this.roomsPerPage);
-    },
     filteredRooms() {
-      const filtered = this.destinationInput
-        ? this.rooms.filter(room => room.location === this.destinationInput)
-        : this.rooms;
-      return filtered;
-    },
+    return this.rooms.filter(room => {
+      const matchesDestination = this.destinationInput ? room.location === this.destinationInput : true;
+      const matchesDate = this.bookingStartDate && this.bookingEndDate ? this.checkAvailability(room) : true;
+      const matchesGuests = this.guestsInput ? this.checkGuests(room) : true;
+      return matchesDestination && matchesDate && matchesGuests;
+    });
+  },
+  visibleRooms() {
+    return this.filteredRooms.slice(this.currentStartIndex, this.currentStartIndex + this.roomsPerPage);
+  }
   },
   methods: {
+    // 篩選邏輯
+    checkAvailability(room) {
+    // 假設所有房間都可用，你可以在這裡添加具體的日期邏輯
+    return true;
+  },
+  checkGuests(room) {
+    // 假設所有房間都支持指定人數，你可以根據房間容量或其他邏輯進行篩選
+    return true;
+  },
     searchRooms() {
-      const filteredRooms = this.rooms.filter(room => {
-        const matchesDestination = this.destinationInput ? room.location === this.destinationInput : true;
-        const matchesDate = this.bookingStartDate && this.bookingEndDate ? this.checkAvailability(room) : true;
-        const matchesGuests = this.guestsInput ? this.checkGuests(room) : true;
-        return matchesDestination && matchesDate && matchesGuests;
-      });
-      this.filteredRooms = filteredRooms;
-    },
+  // 如果目的地、日期和旅客人數未選擇，則不要篩選
+  const filteredRooms = this.rooms.filter(room => {
+    const matchesDestination = this.destinationInput ? room.location === this.destinationInput : true;
+    const matchesDate = this.bookingStartDate && this.bookingEndDate ? this.checkAvailability(room) : true;
+    const matchesGuests = this.guestsInput ? this.checkGuests(room) : true;
+    return matchesDestination && matchesDate && matchesGuests;
+  });
+  
+  // 如果沒有符合的房間，顯示一個提示
+  if (filteredRooms.length === 0) {
+    Swal.fire({
+      title: '無結果',
+      text: '找不到符合條件的房間。',
+      icon: 'warning',
+      confirmButtonText: '確認',
+    });
+  }
+
+  this.filteredRooms = filteredRooms;
+},
     showPopup(type) {
       this.popupType = type;
     },
     closePopup(type) {
-      this.popupType = '';
+    this.popupType = '';
+
+    // 如果關閉的是購物車彈窗，處理購物車的顯示狀態
+     if (type === 'booking') {
+    this.showBookingPopupFlag = false;
+    }
+
+    if (type === 'success') {
+    this.showSuccessPopupFlag = false;
+    }
     },
     saveDestination(value) {
       this.destinationInput = value;
@@ -559,7 +591,7 @@ export default {
   letter-spacing: 20px;
 }
 
-@media (max-width: 1042px) {
+@media (max-width: 430px) {
   .item-h2 h2 {
     font-size: 1.9rem;
     padding-right: 20px;
@@ -855,4 +887,112 @@ p {
   box-sizing: border-box; /* 確保 padding 不會影響大小 */
 }
 
+/* RWD */
+@media (max-width:430px){
+   .wrap{
+    width:100%;
+    overflow: hidden;
+   }
+  .form-container{
+    width: 370px;
+    padding: 5px;
+  }
+  /* 房間區塊 */
+  .room-item{
+    width: 0%;
+  }
+  .room{
+    padding:-0px ;
+    margin-top: 7rem;
+  }
+  .room h2{
+    font-size: 2rem;
+    padding-left: 100px;
+    }
+  .room .smallTitle{
+    padding-left: 120px;
+  }
+  
+  /* 房間容器 */
+  .room-container{
+    padding: 0px;
+    display: flex;
+    gap:10px;
+    justify-content:space-evenly;
+    flex-wrap: wrap;
+  }
+
+  .room-container .room-item {
+  flex: 0 1 calc(50% - 10px); /* 每個卡片寬度為容器寬度的50%（減去間距） */
+  box-sizing: border-box; /* 保證 padding 和 border 不影響卡片的寬度 */
+  margin-bottom: 10px; /* 底部間距 */
+}
+
+  .room-item .price{
+    font-size: 1rem;
+  }
+  .room-item h4{
+    white-space: nowrap;
+    padding: 10px 10px 10px 10px;
+    font-size: 0.65rem;
+    transform:translate(10%,20%);
+  }
+  .room-item img{
+    width: 100vw;
+    height:15vh;
+  }
+  .ratingReviews{
+    display: none;
+  }
+  /* 房間箭頭 */
+  .arrow-left{
+    width: 10vw;
+    padding: 0px;
+    transform:translate(20%,-750%) ;
+  }
+  .arrow-right{
+    width: 10vw;
+    padding: 0px;
+    transform:translate(10%,-750%) ;
+  }
+
+  /* 處理彈跳視窗的寬度 */
+  .popup-content{
+    width: 90%;
+  }
+
+/* 第三個區域 */
+.work-container{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 每行顯示兩個圖片 */
+  gap: 10px;
+  width:100%;
+  padding: 20px;
+}
+.work-container img{
+  width: 100%; /* 讓圖片寬度依據父容器 */
+  height: 20vh;
+  object-fit: cover; /* 確保圖片保持比例，並填滿網格單元 */
+  display: block; /* 將圖片設置為塊級元素，消除空隙 */
+}
+.work{
+  margin-top: 6rem;
+  padding: 3px;
+}
+/* 調整各個圖片的大小 */
+.work-item{
+  max-width: 100%;
+}
+/* 探索更多活動文字 */
+  .work h2{
+    font-size: 2rem;
+    padding-left: 25%;
+  }
+  .work h3{
+   transform: translate(0%,-30%);
+  }
+  .work p{
+    padding-left: 140px;
+  }
+}
 </style>
