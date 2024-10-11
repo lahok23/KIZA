@@ -15,7 +15,7 @@
   <!-- 第一頁 -->
         <section class="page1">
           <div id="summer" class="summer">
-            <video autoplay loop muted plays-inline class="back-video">
+            <video autoplay loop muted plays-inline playsinline class="back-video">
               <source src="../assets/video/奇萊.mp4" type="video/mp4" />
             </video>
             <div class="content">
@@ -34,7 +34,7 @@
   <!-- 第二頁 -->
         <section class="page2">
           <div id="summer" class="summer">
-          <video autoplay loop muted plays-inline class="back-video video2">
+          <video autoplay loop muted plays-inline playsinline class="back-video video2">
             <source src="../assets/video/alufu...mp4" type="video/mp4" />
           </video>
           <div class="content">
@@ -61,7 +61,7 @@
   <!-- 第三頁 -->
         <section class="page3">
           <div id="summer" class="summer">
-          <video autoplay loop muted plays-inline class="back-video video3">
+          <video  autoplay loop muted plays-inline playsinline class="back-video video3">
             <source src="../assets/video/alifongfong.mp4" type="video/mp4" />
           </video>
           <div class="content">
@@ -89,7 +89,7 @@
   <!-- 第四頁 -->
         <section class="page4">
           <div id="summer" class="summer">
-          <video autoplay loop muted plays-inline class="back-video video4">
+          <video autoplay loop muted plays-inline playsinline class="back-video video4">
             <source src="../assets/video/木雕.mp4" class="video4" type="video/mp4" />
           </video>
           <div class="content">
