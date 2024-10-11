@@ -54,6 +54,7 @@ li:hover {
   letter-spacing: 5px;
 }
 
+
 a:hover {
   color: black;
   display: inline-block;
@@ -62,6 +63,25 @@ a:hover {
   border: 2px solid #fff;
   padding: 15px;
   transition: 2s;
+}
+/* LOGO跟進網站的按鈕 */
+@media (max-width:430px){
+  .logo{
+  padding: 50px;
+  margin-left: -40px;
+  }
+  /* 按鈕 */
+ .ul_second a{
+  opacity: 1;
+   font-size:1.5rem;
+   background-color: white;
+   color:black;
+   display: flex;
+   transform: translate(10%,-20%);
+ }
+ a:hover{
+  transform: scale(0);
+ }
 }
 
 .content {
@@ -125,6 +145,7 @@ p {
   z-index: 10;
 }
 
+
 video {
   position: absolute;
   top: 0;
@@ -145,6 +166,8 @@ video {
   background-color: black;
   overflow-y: hidden;
 }
+
+
 
 #logo {
   border: 2px solid black;
@@ -183,6 +206,36 @@ video {
   padding: 0 8em;
 }
 
+
+@media (max-width:430px) {
+.main-container{
+  width: 100%;
+}
+
+  .container{
+    width: 100%;
+  }
+  .video{
+  position: absolute;
+  top: 0;
+  left: -50;
+  z-index: -1;
+  opacity: 1;
+  
+  }
+
+  .container .summer{
+    width: 100%;
+
+    object-fit: cover; /* 讓影片內容適應容器的寬高比 */
+    overflow: hidden; /* 防止內容超出 */
+  }
+  .back-video{
+    object-fit: cover; /* 讓影片內容適應容器的寬高比 */
+    overflow: hidden; /* 禁止滾動 */
+  transform: translate(-50%, 0%);
+}
+}
 .page2 {
   z-index: -1;
   width: 100vw;
@@ -251,4 +304,38 @@ video {
   clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
   position: relative;
   top: 8px;
+}
+
+@media (max-width:430px){
+  .main-container {
+    width: 100vw;
+    height: 100vh; /* 覆蓋整個螢幕高度 */
+    overflow: hidden; /* 禁止滾動 */
+  }
+  
+/* 文字取消 */
+.content{
+  /* display: none; */
+  transform: translate(-30%,350%);
+}
+.content h1{
+  font-size: 3rem;
+  white-space: nowrap;
+}
+.content h2{
+  font-size: 1rem;
+  white-space: nowrap;
+}
+.content h4{
+  display: none;
+}
+/* 隱藏第二頁 第三頁 第四頁 */
+ .page2,.page3,.page4{
+  display: none;
+ }
+
+ /* 滾動查看更多取消 */
+ .scroll-hint{
+  display: none;
+ }
 }

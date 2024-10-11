@@ -27,7 +27,7 @@
               <h3>{{ course.name }}</h3>
               <p>{{ course.instructor }}</p>
             </div>
-            <p>
+            <p class="name">
               {{ course.pronunciation }}
               <span>
                 <i
@@ -629,5 +629,90 @@ section h2 {
   color:crimson;
 }
 
+
+/* cardrwd */
+@media (max-width: 430px) {
+  section{
+    padding: 2rem 2.2rem 2rem 2.2rem;
+    transform: translate(-4.5%,0%);
+  }
+  /* 調整圖像寬度 */
+  .card-item{
+    width: 50%;
+    
+  }
+ 
+  .course {
+    margin: 0 auto;
+    width: 280%;
+    padding-right:20rem;
+   
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+  }
+  .course li{
+    width: 60%;
+  }
+
+  .card-image{
+    width: 130%;
+  } 
+  .card-image > img{
+    width: 100%;
+  }
+  .coursetext{
+    width: 1px;
+  }
+  .card-item > ul{
+  padding: 15px;
+  line-height: 1.2;
+  }
+  .course ul h3{
+    font-size: 1.3rem;
+    white-space: nowrap;
+    margin-bottom:2rem;
+  }
+  .course ul p{
+    margin-top: 0rem;
+    font-size: 0.6rem;
+  }
+  .course .name{
+    font-size: 1.3rem;
+    margin-top: -35px;
+  }
+  .coursetext p{
+    white-space: nowrap;
+    transform: translate(-35%,-10%);
+  }
+  
+
+  /* 金額 */
+  .card-item .subtitle{
+    font-size: 0.7rem;
+    margin-top: -40px;
+    width: 25ch;
+  
+  }
+  .price{
+    white-space: nowrap;
+    padding: px;
+  }
+  .card-item > ul > li a{
+    line-height: 10px;
+  }
+
+  .banner img {
+   height: 50vh;
+  }
+  .text-banner h2 {
+    font-size: 1.7rem;
+    font-weight: bold;
+  }
+  .text-banner h1 {
+    font-size: 1.7rem;
+  }
+  
+}
   </style>
   

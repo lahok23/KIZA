@@ -8,6 +8,10 @@
 </template>
 
 <script>
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
 import HeaderComponent from '@/components/Header.vue'; // 正確引入 Header 組件
 import FooterComponent from '@/components/footer.vue'
 export default {

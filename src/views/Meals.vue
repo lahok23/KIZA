@@ -55,7 +55,7 @@
         <input type="number" v-model="quantity" min="1" max="50" />
 
         <!-- 顯示購買總額 -->
-        <p>{{ totalAmount }} 元</p>
+        <p class="total">{{ totalAmount }} 元</p>
 
         <!-- 確認購買按鈕，點擊後確認購買 -->
         <button @click="confirmPurchase" class="btn-filled-dark">確定</button>
@@ -423,31 +423,61 @@ section h2 {
 }
 
 
-/* 圖片文字rwd */
-@media (max-width: 768px) {
-  .text-banner h2 {
-    font-size: 1.5rem;
-  }
-  .text-banner h1 {
-    font-size: 2rem;
-  }
-}
 
 
 /* cardrwd */
-@media (max-width: 1042px) {
+@media (max-width: 430px) {
+  section{
+    padding: 10px;
+  }
   .course {
-    width: 100%;
+    margin: 0 auto;
+    width: 260%;
+    padding-right: 15rem;
+    padding-left: 0.3rem;
     flex-wrap: wrap;
     display: flex;
     flex-direction: column;
+  }
+  .course li{
+    height: 350px;
+  }
+  .course img{
+    height: 400px;
+  }
+  .card-item > ul{
+  padding: 20px;
+  }
+  .course ul h3{
+    font-size: 1.3rem;
+    white-space: nowrap;
+  }
+  .course ul p{
+    margin-top: -0.5rem;
+    font-size: 1.2rem;
+  }
+  /* 金額 */
+  .card-item .subtitle{
+   font-size: 0.7rem;
+   margin-bottom: 0px;
+  }
+  .card-item > ul > li a{
+   line-height: 10px;
   }
   .card-image {
     height: auto;
   }
   .banner img {
-    height: auto;
+   height: 50vh;
   }
+  .text-banner h2 {
+    font-size: 1.7rem;
+    font-weight: bold;
+  }
+  .text-banner h1 {
+    font-size: 1.7rem;
+  }
+  
 }
 
 .modal {

@@ -131,7 +131,7 @@
     // 確認 container 存在再進行操作
     if (container) {
       const delta = Math.sign(event.deltaY);
-      const scrollStep = 70;
+      const scrollStep = 50;
       container.scrollLeft += delta * scrollStep;
 
       const scrollHint = document.querySelector('.scroll-hint');

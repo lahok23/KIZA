@@ -1,9 +1,8 @@
 <template>
-  <div class="HomePage-wrap">
+  <div class="HomePage-wrap" >
     <!-- 上方 -->
-   <Header></Header>
     <!-- banner -->
-    <div class="banner">
+    <div class="banner" >
       <img src="@/assets/image/毛.png" alt="banner" />
       <div class="text-banner">
         <h1>通往學習文化的路上</h1>
@@ -15,23 +14,31 @@
     </div>
 
     <!-- 第一個內容 介紹 -->
-    <section class="container">
+    <section class="container" >
       <div class="content">
-        <div class="item">
+        <div class="item" data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="1000">
           <i class="ph ph-leaf"></i>
           <h4>土地文化</h4>
           <p>
             這片土地上生活的人雖然有著不同的背景和文化，但他們都是土地上的一部分。
           </p>
         </div>
-        <div class="item">
+        <div class="item" 
+        data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="1000">
           <i class="ph ph-house"></i>
           <h4>奇萊平原</h4>
           <p>
-            花蓮是撒奇萊雅族世居地，原意為「真正的人」。
+            花蓮市是撒奇萊雅族世居地，原意為「真正的人」。
           </p>
         </div>
-        <div class="item">
+        <div class="item"
+        data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="1000">
           <i class="ph ph-map-trifold"></i>
           <h4>部落導覽</h4>
           <p>
@@ -42,13 +49,16 @@
     </section>
 
     <!-- 第二影片過度 -->
-    <section class="container2">
-      <video src="@/assets/video/阿美族.mp4" autoplay muted></video>
+    <section class="container2" >
+      <video  src="@/assets/video/阿美族.mp4" autoplay muted playsinline></video>
     </section>
 
     <!-- 第三選擇文化 -->
-    <section class="container3-main">
-      <div class="container3">
+    <section class="container3-main" 
+     >
+      <div class="container3" data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1000">
         <h4 class="label">開始文化之旅</h4>
         <div class="container3-box">
           <div class="content3">
@@ -95,31 +105,7 @@
 
 <script>
 import 'phosphor-icons';  
-export default {
-  name: 'HomePage',
-  data() {
-    return {
-      isNavbarHidden: window.innerWidth <= 1042,
-    };
-  },
-  methods: {
-    toggleMenu() {
-      this.isNavbarHidden = !this.isNavbarHidden;
-    },
-    updateCartItemCount() {
-      const cartItemCount = document.getElementById("cartItemCount");
-      const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-      const totalItems = cartItems.reduce((total, item) => total + item.quantity, 0);
-      cartItemCount.textContent = totalItems > 0 ? totalItems : 0;
-    }
-  },
-  mounted() {
-    this.updateCartItemCount();
-    window.addEventListener("resize", () => {
-      this.isNavbarHidden = window.innerWidth <= 1042;
-    });
-  },
-};
+
 </script>
 
 <style src="../assets/css/HomePage.css" scoped></style>

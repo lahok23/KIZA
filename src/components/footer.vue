@@ -20,9 +20,11 @@
   justify-content: space-between;
   padding-left: 80px;
   padding-right: 80px;
+ height: 100px;
   background-color: rgb(88, 88, 88);
   margin: 0 auto;
 }
+
 
 .footer .footer-icon {
   font-size: 32px;
@@ -41,4 +43,22 @@
 .footer-icon a:hover {
   font-size: 40px;
   transition: 1s;
-}</style>
+}
+
+@media (max-width:430px){
+  .footer{
+    padding-left: 30px;
+  }
+  .footer img{
+  width: 100px; 
+  max-width: 300px; 
+  height: auto;
+  margin-right: 6.5rem;
+}
+
+
+.footer-icon li {
+  padding: 10px;
+}
+}
+</style>

@@ -297,17 +297,88 @@
   transition: 1s;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 430px) {
   .item {
     width: 100%;
   }
+  .item span{
+    font-size: 2.5rem;
+  }
   .item h2 {
     font-size: 3rem;
+    white-space: nowrap;
   }
-  .h4-4 span {
-    font-size: 2px;
+  .item p {
+    transform:translate(50%,-50%);
+    position: absolute;
+    top: 90%;
+    right: 35.5%;
+    text-align: center;
+    color: #ffffff;
+    opacity: 0.6;
+    font-size: 14px;
   }
-  .h4-4 h4 {
-    font-size: 2px;
+  
+  .item img:hover ~ .h4-1 {
+    width: 1000px;
+    width: 40ch;
+    display: block;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 35px;
+    letter-spacing: 5px;
+    text-align: center;
+    font-weight: bold;
+  }
+  .item img:hover ~ .h4-2 {
+    width: 1000px;
+    width: 40ch;
+    display: block;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 35px;
+    letter-spacing: 5px;
+    text-align: center;
+    font-weight: bold;
+  }
+  .item img:hover ~ .h4-3 {
+    width: 1000px;
+    width: 40ch;
+    display: block;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 35px;
+    letter-spacing: 5px;
+    text-align: center;
+    font-weight: bold;
+  }
+  .item img:hover ~ .h4-4 {
+    width: 1000px;
+    width: 40ch;
+    display: block;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 35px;
+    letter-spacing: 5px;
+    text-align: center;
+    font-weight: bold;
   }
 }
+
+

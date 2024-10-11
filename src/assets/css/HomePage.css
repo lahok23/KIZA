@@ -14,90 +14,7 @@
   /* 第四 */
 
 }
-.HomePage-wrap .header {
-  z-index: 100;
-  display: flex;
-  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
-  box-shadow: 1px 2px 5px gray;
-  align-items: center;
-  justify-content: space-around;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  max-width: 100%;
-  padding: 0px 20px;
-}
-.HomePage-wrap .navbar.hidden {
-  display: none;
-}
-.HomePage-wrap .hamburger {
-  display: none;
-  cursor: pointer;
-  font-size: 28px;
-}
-@media (max-width: 1042px) {
-  .HomePage-wrap .header {
-    display: flex;
-    justify-content: space-between;
-  }
-  .HomePage-wrap .navbar {
-    display: block;
-    flex-direction: column;
-    width: 100%;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    background-color: #fdfbfb;
-    box-shadow: 1px 3px 5px gray;
-  }
-  .HomePage-wrap .navbar li {
-    padding: 15px 0;
-    margin: 0;
-    text-align: center;
-  }
-  .HomePage-wrap .navbar li a {
-    font-size: 20px;
-  }
-  .HomePage-wrap .hamburger {
-    display: block;
-  }
-  .HomePage-wrap .icon {
-    display: none;
-  }
-}
-.HomePage-wrap #logo img {
-  opacity: 0.9;
-  display: block;
-  text-indent: 101%;
-  overflow: hidden;
-  white-space: nowrap;
-}
-.HomePage-wrap .navbar {
-  display: flex;
-}
-.HomePage-wrap .navbar li {
-  padding-left: 30px;
-  padding-right: 40px;
-  margin-right: 50px;
-}
-.HomePage-wrap .navbar li a {
-  text-decoration: none;
-  font-size: 22px;
-  font-weight: 500;
-  color: black;
-}
-.HomePage-wrap .icon a {
-  text-decoration: none;
-  font-size: 22px;
-  font-weight: 500;
-  color: black;
-}
-.HomePage-wrap .icon a:hover {
-  color: crimson;
-  border-bottom: 4px solid crimson;
-  padding-bottom: 16px;
-  transition: 1s;
-}
+
 .HomePage-wrap .navbar li a:hover {
   color: crimson;
   border-bottom: 4px solid crimson;
@@ -150,6 +67,27 @@
   color: #fff;
   transition: 1s;
   font-weight: bold;
+}
+/* 上方圖片 文字的rwd */
+@media (max-width:430px) {
+  .banner{
+    top:60px;
+  }
+  .banner img{
+    height: 350px;
+    object-fit: cover;
+  }
+  .HomePage-wrap .text-banner{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width:400px;
+    transform: translate(-50%, -50%);
+    padding: 30px 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 40px;
+  }
 }
 .HomePage-wrap .container {
   margin-right: 5rem;
@@ -247,7 +185,7 @@
 .HomePage-wrap .gallery .box {
   width: 25%;
   height: 17rem;
-  flex-grow: 1;
+  flex-grow: 2;
   overflow: hidden;
   border-radius: 0.8rem;
   position: relative;
@@ -295,10 +233,76 @@
     align-items: center;
   }
   .HomePage-wrap .item {
-    width: 50%;
+    width: 100%;
     border: 1px solid gray;
     margin: 10px 2px;
   }
 }
 
-/*# sourceMappingURL=HomePage.css.map */
+/* 第一個區塊 icon區域 */
+@media (max-width:430px){
+  .container{
+    padding: 0px;
+ 
+    margin:  0 auto;
+    margin-left: 80px;
+  }
+ .container .item{
+  padding: 20px;
+  font-size: 15px;
+  line-height: 20px;
+ }
+ .container .item p{
+  line-height: 20px;
+  width: 20ch;
+  margin: 0 auto;
+ }
+}
+/* 第二個影片區塊 */
+@media (max-width:430px) {
+  .container2 video{
+    width: 10px;
+  }
+}
+
+/* 第三個區域 選擇文化 */
+@media (max-width:430px){
+  .container3{
+    /* max-width: 200%;。 */
+   padding-top: 0px;
+   padding-right: 20px;
+   
+  }
+  .container3 .label{
+    width: 20ch;
+  }
+  .HomePage-wrap .container3 h4{
+    font-size:3rem ;
+  }
+
+  .HomePage-wrap .container3{
+    padding-left:0px;
+  }
+  .HomePage-wrap .container3-main .container3 .container3-box{
+    height: 80px;
+    width: 100%;
+    width: 28ch;
+  }
+
+
+
+  /* 選擇區塊 */
+  .HomePage-wrap .gallery{
+    width: 330px;
+  
+  }
+
+
+  .HomePage-wrap .gallery .box img{
+    height: 300px;
+  }
+
+  .HomePage-wrap .gallery .box{
+    width: 40%;
+  }
+}
