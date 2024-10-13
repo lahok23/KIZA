@@ -403,7 +403,7 @@ export default {
 @import url(../assets/css/reset.css);
 
 .wrap {
-  width: 1440px;
+  width: 100%;
   margin: 0 auto;
   background-image: url(../assets/image/背景背景.png);
   background-size: cover;
@@ -765,11 +765,11 @@ export default {
 }
 
 .arrow-left {
-  left: 4%;
+  left: 3%;
 }
 
 .arrow-right {
-  right: 4%;
+  right: 3%;
 }
 
 .room {

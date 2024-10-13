@@ -506,3 +506,69 @@ a.btn:active:after {
   font-size: 40px;
   transition: 1s;
 }
+
+
+@media (max-width:430px){
+  .wrap {
+    width: 100%;
+  }
+
+  .heading {
+    padding-top: 100px;
+  }
+  .heading h1{
+    font-size: 2rem;
+  }
+  .cart .items .cartSection{
+  display: flex;
+  margin: 0px;
+  width: 400px;
+  padding: 0px;
+  }
+  .cart .items .cartSection img.itemImg{
+    margin-left: 0rem;
+    width:85px;
+    height: 130px;
+    object-fit: cover;
+  }
+
+  .cart .items .cartSection h3{
+    padding-right: 10px;
+  }
+
+  .cart span{
+    margin-left: 0rem;
+    padding-right: 10px;
+  }
+  .cart .items .cartSection input.qty{
+    margin-left: 0px;
+  }
+
+  /* 金額 */
+  .cart .items .prodTotal p {
+    padding-left: 0rem;
+    margin-right: 20px;
+    width: 80px;
+  }
+  .cart .items .infoWrap{
+    width: 100%;
+  }
+
+  .cart .items.even {
+    width: 100%;
+  }
+  .delete{
+    padding-left: 0.5rem;
+  }
+
+
+  /* 下面小計 */
+  .subtotal{
+    margin: 0px;
+    transform: translate(-5%,0%);
+    padding: 0%;
+  }
+.checkout-form{
+  padding: 20px;
+}
+}
