@@ -80,8 +80,8 @@ export default {
 
 .navbar li {
   padding-left: 30px;
-  padding-right: 40px;
-  margin-right: 50px;
+  padding-right: 50px;
+
 }
 
 /* 強制蓋過 文字無法變色的困擾 */
